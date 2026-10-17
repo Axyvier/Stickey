@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="id">
 <head>
+  <script>
+window.addEventListener('error', function (e) {
+  document.body.insertAdjacentHTML('beforeend',
+    '<pre style="color:red;padding:12px;white-space:pre-wrap">' +
+    e.message + ' @ ' + e.filename + ':' + e.lineno + '</pre>');
+});
+window.addEventListener('unhandledrejection', function (e) {
+  document.body.insertAdjacentHTML('beforeend',
+    '<pre style="color:red;padding:12px;white-space:pre-wrap">' + e.reason + '</pre>');
+});
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Meme Forge</title>
