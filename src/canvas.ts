@@ -2,7 +2,7 @@ import { Doc, Obj } from './types';
 
 export const W = 1080;
 export const H = (d: Doc) => Math.round(W * d.r);
-const font = (o: Obj) => 900 ${o.size}px Impact, "Arial Black", sans-serif;
+const font = (o: Obj) => '900 ${o.size}px Impact, "Arial Black", sans-serif;
 
 const mc = document.createElement('canvas').getContext('2d')!;
 const size = (o: Obj) => {
